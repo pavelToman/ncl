@@ -251,7 +251,7 @@ static void *NetMapFromNcl
 			*(nc_type*)out_type = NC_LONG;
 		} else {
 			NhlPError(NhlWARNING,NhlEUNKNOWN,"Classic NetCDF does not support 8-byte longs; convert to a supported data type or use the NetCDF4 format");
-			*(nc_type*)out_type = NULL;
+			*(nc_type*)out_type = NC_NAT;
 		}
 		break;
 	case NCL_float:
